@@ -1,3 +1,13 @@
+import { PublicArrayContent } from '@writetome51/public-array-content';
+import { getMax, getMin } from '@writetome51/get-max-min';
+import { getAverage, getProduct, getSum } from '@writetome51/get-sum-average-product';
+import { getMedian } from '@writetome51/get-median';
+import { getShuffled } from '@writetome51/array-get-shuffled';
+import { inRange } from '@writetome51/in-range';
+import { getInAscendingOrder } from '@writetome51/get-in-ascending-order';
+import { inAscendingOrder } from '@writetome51/in-ascending-order';
+
+
 export class NumberArray extends PublicArrayContent {
 
 
@@ -17,7 +27,7 @@ export class NumberArray extends PublicArrayContent {
 
 
 	get difference(): number {
-		return this.max - this.min;
+		return (this.max - this.min);
 	}
 
 

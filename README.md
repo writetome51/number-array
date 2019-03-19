@@ -61,7 +61,7 @@ order(): void
 
 shuffle(): void
 
-asString(glue = ', '): string
+asString(glue? = ', '): string
     // Does same thing as Array.join()
 
 has(value): boolean
