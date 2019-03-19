@@ -1,0 +1,35 @@
+{
+  "name": "@writetome51/number-array",
+  "version": "1.0.0",
+  "description": "A typescript/javascript class which contains and manipulates an array of numbers",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/number-array.git"
+  },
+  "keywords": [
+    "array",
+    "manipulation",
+    "content",
+    "typescript",
+    "class"
+  ],
+  "author": "Steve Thompson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/writetome51/number-array/issues"
+  },
+  "homepage": "https://github.com/writetome51/number-array#readme",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "basic-data-handling": "~1.0.15",
+    "@writetome51/arrays-match": "~1.0.5",
+    "@writetome51/array-get-copy": "~1.1.2",
+    "@writetome51/public-array-content": "~2.0.2"
+  }
+}
