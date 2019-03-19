@@ -1,6 +1,8 @@
 # NumberArray
 
-An Typescript/Javascript class which contains and manipulates an array of numbers.
+An Typescript/Javascript class which contains and manipulates an array of numbers.  
+It has properties that describe the data set, such as `max`, `min`, `sum`, `average`,  
+and `product`.
 
 ## Constructor
 ```
@@ -195,7 +197,7 @@ You must have npm installed first. Then, in the command line:
 ## Loading
 ```
 // if using TypeScript:
-import { PublicArrayContent } from '@writetome51/number-array';
+import { NumberArray } from '@writetome51/number-array';
 // if using ES5 JavaScript:
 var NumberArray = require('@writetome51/number-array').NumberArray;
 ```
