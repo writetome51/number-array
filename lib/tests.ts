@@ -1,5 +1,4 @@
 import { NumberArray } from './index';
-import { arraysMatch } from '@writetome51/arrays-match';
 import { inRange } from '@writetome51/in-range';
 
 
