@@ -18,7 +18,6 @@ var get_max_min_1 = require("@writetome51/get-max-min");
 var get_sum_average_product_1 = require("@writetome51/get-sum-average-product");
 var get_median_1 = require("@writetome51/get-median");
 var array_get_shuffled_1 = require("@writetome51/array-get-shuffled");
-var in_range_1 = require("@writetome51/in-range");
 var get_in_ascending_order_1 = require("@writetome51/get-in-ascending-order");
 var in_ascending_order_1 = require("@writetome51/in-ascending-order");
 var NumberArray = /** @class */ (function (_super) {
@@ -84,7 +83,7 @@ var NumberArray = /** @class */ (function (_super) {
         configurable: true
     });
     NumberArray.prototype.allInRange = function (range) {
-        return this.allPass(function (num) { return in_range_1.inRange(range, num); });
+        return (range[0] <= this.min && range[1] >= this.max);
     };
     NumberArray.prototype.order = function () {
         this.set(get_in_ascending_order_1.getInAscendingOrder(this.data));

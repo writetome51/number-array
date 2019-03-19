@@ -14,13 +14,13 @@ this.data = [1,2,3,4];
 
 ## Properties
 ```
-data : any[]  // the actual array
+data : number[]  // the actual array
 
 length : number // length of this.data
 
-max: number (read-only)
+max: number (read-only) // highest number in the array.
 
-min: number (read-only)
+min: number (read-only) // lowest number in the array.
 
 difference: number (read-only) // difference between max and min.
 
@@ -32,7 +32,7 @@ product: number (read-only)
 
 median: number (read-only)
 
-areOrdered: boolean (read-only)
+areOrdered: boolean (read-only) // true if numbers are in ascending order.
 
 isEmpty : boolean (read-only)
 
@@ -50,20 +50,43 @@ className : string (read-only)
 <summary>view methods</summary>
 
 
-NOTICE:  For all the methods below, any parameter called `value` cannot be an object,   
-and any parameter called `values` cannot contain an object.   
-This does not include arrays. Arrays are OK, as long as they don't contain objects.
-
 ```
 allInRange(range: [min, max]): boolean
+    // Example: this.data = [10,13,20,22,25]
+    // this.allInRange([13, 20]); // --> false
+    // this.allInRange([10, 25]); // --> true
 
 order(): void
+    // puts numbers in this.data in ascending order.
 
 shuffle(): void
+    // randomizes the order of numbers in this.data .
+
+set(newArray): void
+    // Changes value of this.data to newArray without breaking its memory reference.
+    // So if there are copies of this.data, the copies will be updated as well.
+
+append(values): this
+    // attaches values to end of this.data.
+
+prepend(values): this
+    // attaches values to beginning of this.data.
+
+moveByIndex(currentIndex, newIndex): this
+    // moves an item, identified by currentIndex, to newIndex.
+    // Both currentIndex and newIndex can be negative or positive.
+
+forEach(iterationFunction): void
+    // Behaves same as Array.forEach()
+    // iterationFunction = function(currentValue, currentIndex?, entireArray?): any
 
 asString(glue? = ', '): string
     // Does same thing as Array.join()
-
+```
+NOTICE:  For all the methods below, any parameter called `value` cannot be an object,   
+and any parameter called `values` cannot contain an object.   
+This does not include arrays. Arrays are OK, as long as they don't contain objects.
+```
 has(value): boolean
     // returns true if this.data contains `value`.
 
@@ -161,7 +184,7 @@ protected   _runMethod_and_returnThis(
 
 ## Inheritance Chain
 
-NumberArray<--[PublicArrayContent]<--[PublicArrayContainer](https://github.com/writetome51/public-array-container#publicarraycontainer)<--[BaseClass](https://github.com/writetome51/typescript-base-class#baseclass)
+NumberArray<--[PublicArrayContent](https://github.com/writetome51/public-array-content#publicarraycontent)<--[PublicArrayContainer](https://github.com/writetome51/public-array-container#publicarraycontainer)<--[BaseClass](https://github.com/writetome51/typescript-base-class#baseclass)
 
 ## Installation
 

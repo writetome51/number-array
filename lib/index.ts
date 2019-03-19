@@ -3,7 +3,6 @@ import { getMax, getMin } from '@writetome51/get-max-min';
 import { getAverage, getProduct, getSum } from '@writetome51/get-sum-average-product';
 import { getMedian } from '@writetome51/get-median';
 import { getShuffled } from '@writetome51/array-get-shuffled';
-import { inRange } from '@writetome51/in-range';
 import { getInAscendingOrder } from '@writetome51/get-in-ascending-order';
 import { inAscendingOrder } from '@writetome51/in-ascending-order';
 
@@ -57,7 +56,7 @@ export class NumberArray extends PublicArrayContent {
 
 
 	allInRange(range: [number, number]): boolean {
-		return this.allPass((num) => inRange(range, num));
+		return (range[0] <= this.min && range[1] >= this.max);
 	}
 
 
