@@ -184,6 +184,18 @@ protected   _runMethod_and_returnThis(
 </details>
 
 
+## Usage Examples
+```
+let numbers = new NumberArray([1,2,3,4,5,6,7,8,9,10]);
+console.log(numbers.sum); // console: '55'
+console.log(numbers.average); // console: '5.5'
+console.log(numbers.median); // console: '5.5'
+console.log(numbers.difference); // console: '9'
+console.log(numbers.areOrdered); // console: 'true'
+console.log(numbers.allInRange([100, 200])); // console: 'false'
+console.log(numbers.endsWith([9, 10])); // console: 'true'
+```
+
 ## Inheritance Chain
 
 NumberArray<--[PublicArrayContent](https://github.com/writetome51/public-array-content#publicarraycontent)<--[PublicArrayContainer](https://github.com/writetome51/public-array-container#publicarraycontainer)<--[BaseClass](https://github.com/writetome51/typescript-base-class#baseclass)

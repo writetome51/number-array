@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/number-array",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A typescript/javascript class which contains and manipulates an array of numbers",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -34,6 +34,6 @@
     "@writetome51/get-median": "~2.0.1",
     "@writetome51/get-sum-average-product": "~1.0.5",
     "@writetome51/in-ascending-order": "~1.0.2",
-    "@writetome51/public-array-content": "~2.1.0"
+    "@writetome51/public-array-content": "~2.1.1"
   }
 }
