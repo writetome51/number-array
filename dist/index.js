@@ -13,13 +13,13 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var public_array_content_1 = require("@writetome51/public-array-content");
 var get_max_min_1 = require("@writetome51/get-max-min");
 var get_sum_average_product_1 = require("@writetome51/get-sum-average-product");
 var get_median_1 = require("@writetome51/get-median");
 var array_get_shuffled_1 = require("@writetome51/array-get-shuffled");
-var get_in_ascending_order_1 = require("@writetome51/get-in-ascending-order");
-var in_ascending_order_1 = require("@writetome51/in-ascending-order");
+var get_in_numeric_order_1 = require("@writetome51/get-in-numeric-order");
+var in_numeric_order_1 = require("@writetome51/in-numeric-order");
+var public_array_content_1 = require("@writetome51/public-array-content");
 var NumberArray = /** @class */ (function (_super) {
     __extends(NumberArray, _super);
     function NumberArray(data) {
@@ -77,16 +77,20 @@ var NumberArray = /** @class */ (function (_super) {
     });
     Object.defineProperty(NumberArray.prototype, "areOrdered", {
         get: function () {
-            return in_ascending_order_1.inAscendingOrder(this.data);
+            return in_numeric_order_1.inNumericOrder(this.data);
         },
         enumerable: true,
         configurable: true
     });
     NumberArray.prototype.allInRange = function (range) {
+        if (range[0] > range[1]) {
+            throw new Error('In the range array, the first number must be less than or' +
+                ' equal to the second number');
+        }
         return (range[0] <= this.min && range[1] >= this.max);
     };
     NumberArray.prototype.order = function () {
-        this.set(get_in_ascending_order_1.getInAscendingOrder(this.data));
+        this.set(get_in_numeric_order_1.getInNumericOrder(this.data));
     };
     NumberArray.prototype.shuffle = function () {
         this.set(array_get_shuffled_1.getShuffled(this.data));

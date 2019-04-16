@@ -1,10 +1,10 @@
-import { PublicArrayContent } from '@writetome51/public-array-content';
 import { getMax, getMin } from '@writetome51/get-max-min';
 import { getAverage, getProduct, getSum } from '@writetome51/get-sum-average-product';
 import { getMedian } from '@writetome51/get-median';
 import { getShuffled } from '@writetome51/array-get-shuffled';
-import { getInAscendingOrder } from '@writetome51/get-in-ascending-order';
-import { inAscendingOrder } from '@writetome51/in-ascending-order';
+import { getInNumericOrder } from '@writetome51/get-in-numeric-order';
+import { inNumericOrder } from '@writetome51/in-numeric-order';
+import { PublicArrayContent } from '@writetome51/public-array-content';
 
 
 export class NumberArray extends PublicArrayContent {
@@ -51,17 +51,21 @@ export class NumberArray extends PublicArrayContent {
 
 
 	get areOrdered(): boolean {
-		return inAscendingOrder(this.data);
+		return inNumericOrder(this.data);
 	}
 
 
 	allInRange(range: [number, number]): boolean {
+		if (range[0] > range[1]) {
+			throw new Error('In the range array, the first number must be less than or' +
+				' equal to the second number');
+		}
 		return (range[0] <= this.min && range[1] >= this.max);
 	}
 
 
 	order(): void {
-		this.set(getInAscendingOrder(this.data));
+		this.set(getInNumericOrder(this.data));
 	}
 
 
