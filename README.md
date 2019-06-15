@@ -5,12 +5,12 @@ It has properties that describe the numbers, such as `max`, `min`, `sum`, `avera
 and `product`.
 
 ## Constructor
-```
+```ts
 constructor(data? = []) // 'data' is assigned to this.data .
 ```
 
 You can reset the array by accessing the class `.data` property:
-```
+```ts
 this.data = [1,2,3,4];
 ```  
 
@@ -18,7 +18,7 @@ this.data = [1,2,3,4];
 <details>
 <summary>view properties</summary>
 
-```
+```ts
 data : number[]  // the actual array
 
 length : number // length of this.data
@@ -56,7 +56,7 @@ className : string (read-only)
 <details>
 <summary>view methods</summary>
 
-```
+```ts
 allInRange(range: [min, max]): boolean
     // Example: this.data = [10,13,20,22,25]
     // this.allInRange([13, 20]); // --> false
@@ -92,7 +92,7 @@ asString(glue? = ', '): string
 NOTICE:  For all the methods below, any parameter called `value` cannot be an object,   
 and any parameter called `values` cannot contain an object.   
 This does not include arrays. Arrays are OK, as long as they don't contain objects.
-```
+```ts
 has(value): boolean
     // returns true if this.data contains `value`.
 
@@ -133,7 +133,7 @@ For the next 3 methods:
 `Array.filter()` :  
 `testFunction(item, index?, theArray?): boolean`  
 If `item` passes a test, `testFunction` returns true.
-```
+```ts
 allPass(testFunction): boolean
     // returns true if all items pass test.
 
@@ -145,7 +145,7 @@ indexesThatPass(testFunction): number[]
 ``` 
 The methods below are not important to know about in order to use this  
 class.  They're inherited from [BaseClass](https://github.com/writetome51/typescript-base-class#baseclass) .
-``` 
+```ts
 protected   _createGetterAndOrSetterForEach(
                   propertyNames: string[],
                   configuration: IGetterSetterConfiguration
@@ -188,7 +188,7 @@ protected   _errorIfPropertyHasNoValue(
 
 
 ## Usage Examples
-```
+```ts
 let numbers = new NumberArray([1,2,3,4,5,6,7,8,9,10]);
 console.log(numbers.sum); // console: '55'
 console.log(numbers.average); // console: '5.5'
@@ -210,7 +210,7 @@ You must have npm installed first. Then, in the command line:
     npm install @writetome51/number-array
 
 ## Loading
-```
+```ts
 // if using TypeScript:
 import { NumberArray } from '@writetome51/number-array';
 // if using ES5 JavaScript:
