@@ -1,12 +1,12 @@
 # NumberArray
 
 An Typescript/Javascript class which contains and manipulates an array of numbers.  
-It has properties that describe the data set, such as `max`, `min`, `sum`, `average`,  
+It has properties that describe the numbers, such as `max`, `min`, `sum`, `average`,  
 and `product`.
 
 ## Constructor
 ```
-constructor(data? = []) // 'data' becomes the array of numbers it contains.
+constructor(data? = []) // 'data' is assigned to this.data .
 ```
 
 You can reset the array by accessing the class `.data` property:
@@ -15,6 +15,9 @@ this.data = [1,2,3,4];
 ```  
 
 ## Properties
+<details>
+<summary>view properties</summary>
+
 ```
 data : number[]  // the actual array
 
@@ -46,11 +49,12 @@ copy : this (read-only)
 
 className : string (read-only)
 ```
+</details>
+
 
 ## Methods
 <details>
 <summary>view methods</summary>
-
 
 ```
 allInRange(range: [min, max]): boolean
@@ -129,7 +133,6 @@ For the next 3 methods:
 `Array.filter()` :  
 `testFunction(item, index?, theArray?): boolean`  
 If `item` passes a test, `testFunction` returns true.
-
 ```
 allPass(testFunction): boolean
     // returns true if all items pass test.
@@ -174,12 +177,12 @@ protected   _returnThis_after(voidExpression: any) : this
     // voidExpression is executed, then function returns this.
     // Even if voidExpression returns something, the returned data isn't used.
 
-protected   _runMethod_and_returnThis(
-    callingObject, 
-    method: Function, 
-    methodArgs: any[], 
-    additionalAction?: Function // takes the result returned by method as an argument.
-) : this
+protected   _errorIfPropertyHasNoValue(
+                property: string, // can contain dot-notation, i.e., 'property.subproperty'
+                propertyNameInError? = ''
+            ) : void
+    // If value of this[property] is undefined or null, it triggers fatal error:
+    // `The property "${propertyNameInError}" has no value.`
 ```
 </details>
 

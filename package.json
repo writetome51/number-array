@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/number-array",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "A typescript/javascript class which contains and manipulates an array of numbers",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -33,15 +33,15 @@
   },
   "homepage": "https://github.com/writetome51/number-array#readme",
   "devDependencies": {
-    "@writetome51/in-range": "~1.0.4"
+    "@writetome51/in-range": "^1.0.4"
   },
   "dependencies": {
-    "@writetome51/array-get-shuffled": "~1.0.5",
-    "@writetome51/get-in-numeric-order": "~1.0.1",
-    "@writetome51/get-max-min": "~1.0.2",
-    "@writetome51/get-median": "~2.0.3",
-    "@writetome51/get-sum-average-product": "~1.0.6",
-    "@writetome51/in-numeric-order": "~1.0.1",
-    "@writetome51/public-array-content": "~2.1.1"
+    "@writetome51/array-get-shuffled": "^1.0.5",
+    "@writetome51/get-in-numeric-order": "^1.0.1",
+    "@writetome51/get-max-min": "^1.0.2",
+    "@writetome51/get-median": "^2.0.3",
+    "@writetome51/get-sum-average-product": "^1.0.6",
+    "@writetome51/in-numeric-order": "^1.0.1",
+    "@writetome51/public-array-content": "^3.0.0"
   }
 }

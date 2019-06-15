@@ -10,11 +10,6 @@ import { PublicArrayContent } from '@writetome51/public-array-content';
 export class NumberArray extends PublicArrayContent {
 
 
-	constructor(data: number[] = []) {
-		super(data);
-	}
-
-
 	get max(): number {
 		return getMax(this.data);
 	}

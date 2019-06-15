@@ -22,9 +22,8 @@ var in_numeric_order_1 = require("@writetome51/in-numeric-order");
 var public_array_content_1 = require("@writetome51/public-array-content");
 var NumberArray = /** @class */ (function (_super) {
     __extends(NumberArray, _super);
-    function NumberArray(data) {
-        if (data === void 0) { data = []; }
-        return _super.call(this, data) || this;
+    function NumberArray() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     Object.defineProperty(NumberArray.prototype, "max", {
         get: function () {

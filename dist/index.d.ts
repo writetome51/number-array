@@ -3,8 +3,6 @@ import { PublicArrayContent } from '@writetome51/public-array-content';
 
 export declare class NumberArray extends PublicArrayContent {
 
-	constructor(data?: number[]);
-
 
 	readonly max: number;
 	readonly min: number;
