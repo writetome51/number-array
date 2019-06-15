@@ -204,10 +204,7 @@ console.log(numbers.endsWith([9, 10])); // console: 'true'
 NumberArray<--[PublicArrayContent](https://github.com/writetome51/public-array-content#publicarraycontent)<--[PublicArrayContainer](https://github.com/writetome51/public-array-container#publicarraycontainer)<--[BaseClass](https://github.com/writetome51/typescript-base-class#baseclass)
 
 ## Installation
-
-You must have npm installed first. Then, in the command line:
-
-    npm install @writetome51/number-array
+`npm i  @writetome51/number-array`
 
 ## Loading
 ```ts
